@@ -4,6 +4,8 @@ Plugin Name: WP Youtube Feed
 Plugin URI: https://github.com/fulltimeforce/wp-youtube-feed
 Description: Plugin to get YouTube Feed
 Version: 0.0.1
+Author: FullTimeForce
+Author URI: https://www.fulltimeforce.com/
 */
 
 require_once dirname(__FILE__).'/classes/shortcode.class.php';
