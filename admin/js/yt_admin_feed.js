@@ -4,6 +4,7 @@ jQuery(document).ready(function($){
         $('#adding_feed').modal('show');
     });
 
+    // Delete post
     $(document).on('click', 'a[data-id]', function(){
         var id = this.dataset.id;
 
@@ -19,6 +20,6 @@ jQuery(document).ready(function($){
                 location.reload();
             }
         });
-    })
+    });
 
 });

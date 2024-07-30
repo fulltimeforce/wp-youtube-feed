@@ -1,0 +1,27 @@
+.frm_yt_feed{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    div, a, img, p, h3{
+        box-sizing: border-box;
+    }
+    img{
+        vertical-align: top;
+    }
+}
+
+.frm_yt_post{
+    &>*{
+        width: 100%;
+    }
+    &-thumb{
+        img{
+            width: 100%;
+            aspect-ratio: 16/9;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

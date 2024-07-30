@@ -1,0 +1,24 @@
+.frm_yt_feed {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.frm_yt_feed div, .frm_yt_feed a, .frm_yt_feed img, .frm_yt_feed p, .frm_yt_feed h3 {
+  box-sizing: border-box;
+}
+.frm_yt_feed img {
+  vertical-align: top;
+}
+
+.frm_yt_post > * {
+  width: 100%;
+}
+.frm_yt_post-thumb img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}/*# sourceMappingURL=yt_front_feed.css.map */
