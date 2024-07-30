@@ -43,7 +43,7 @@ function create_menu(){
         plugin_dir_path(__FILE__).'admin/content.php', //slug
         null, //function to show content in admin page
         plugin_dir_url(__FILE__).'admin/img/icon.png',
-        '1'
+        '5'
     );
 }
 
@@ -53,8 +53,9 @@ function reg_bootstrap($hook){ //register bootstrap
         return;
     }
 
-    wp_enqueue_script('bootstrapjs', plugins_url('admin/bootstrap/js/bootstrap.min.js', __FILE__, array('jquery')));
-    wp_enqueue_script('ytadminfeedjs', plugins_url('admin/js/yt_admin_feed.js', __FILE__, array('jquery')));
+    wp_enqueue_script('jquery-to-feed', plugins_url('jquery.min.js', __FILE__));
+    wp_enqueue_script('bootstrapjs', plugins_url('admin/bootstrap/js/bootstrap.min.js', __FILE__, array('jquery-to-feed')));
+    wp_enqueue_script('ytadminfeedjs', plugins_url('admin/js/yt_admin_feed.js', __FILE__, array('jquery-to-feed')));
     wp_enqueue_style('bootstrapcss', plugins_url('admin/bootstrap/css/bootstrap.min.css', __FILE__));
 
     wp_localize_script('ytadminfeedjs', 'solicitudAjax', [
@@ -66,7 +67,8 @@ add_action('admin_enqueue_scripts', 'reg_bootstrap');
 
 function reg_scripts($hook){ //register bootstrap
     
-    wp_enqueue_script('ytfrontfeedjs', plugins_url('frontend/js/yt_front_feed.js', __FILE__, array('jquery')));
+    wp_enqueue_script('jquery-to-feed', plugins_url('jquery.min.js', __FILE__));
+    wp_enqueue_script('ytfrontfeedjs', plugins_url('frontend/js/yt_front_feed.js', __FILE__, array('jquery-to-feed')));
     wp_enqueue_style('ytfrontfeedcss', plugins_url('frontend/css/yt_front_feed.css', __FILE__));
 
     wp_localize_script('ytfrontfeedjs', 'solicitudAjax', [
