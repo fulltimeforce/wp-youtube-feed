@@ -99,7 +99,7 @@ if (empty($feeds)) {
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary" id="close_popup" data-dismiss="modal">Cerrar</button>
                     <button type="submit" name="save_feed" id="save_feed" class="btn btn-primary">Guardar</button>
                 </div>
             </form>

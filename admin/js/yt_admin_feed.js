@@ -4,6 +4,10 @@ jQuery(document).ready(function($){
         $('#adding_feed').modal('show');
     });
 
+    $('#close_popup').click(function(){
+        $('#adding_feed').modal('hide');
+    });
+
     // Delete post
     $(document).on('click', 'a[data-id]', function(){
         var id = this.dataset.id;
